@@ -1,0 +1,45 @@
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.video-container {
+  position: relative;
+  width: 90%;
+  height: 0;
+  padding-bottom: 56.25%; /* Maintain aspect ratio 16:9 */
+}
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.video-cover {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 90%;
+  background: url("./images/videocover.png") no-repeat center center;
+  background-size: cover;
+  cursor: pointer;
+  z-index: 2;
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; /* Ensure play button is above the cover image */
+  cursor: pointer;
+}
